@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowing Pulsing Heart Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="hearts-container">
+        <svg class="heart" viewBox="-5 -5 42 39">
+            <defs>
+                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ff007f; stop-opacity:1;" /> <!-- Dark Pink -->
+                    <stop offset="100%" style="stop-color:#ff8ab8; stop-opacity:1;" /> <!-- Light Pink -->
+                </linearGradient>
+            </defs>
+            <path fill="none" stroke="url(#gradient1)" stroke-width="2.5" d="M23.6,0C20.5,0,18.2,1.6,16,4.4C13.8,1.6,11.5,0,8.4,0C4,0,0,4.1,0,9.4
+                c0,5.8,8.2,11.1,16,19.2c7.8-8.1,16-13.4,16-19.2C32,4.1,28,0,23.6,0z"/>
+        </svg>
+        <svg class="heart1" viewBox="-5 -5 42 39">
+            <defs>
+                <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ff007f; stop-opacity:1;" />
+                    <stop offset="100%" style="stop-color:#ff8ab8; stop-opacity:1;" />
+                </linearGradient>
+            </defs>
+            <path fill="none" stroke="url(#gradient2)" stroke-width="2.5" d="M23.6,0C20.5,0,18.2,1.6,16,4.4C13.8,1.6,11.5,0,8.4,0C4,0,0,4.1,0,9.4
+                c0,5.8,8.2,11.1,16,19.2c7.8-8.1,16-13.4,16-19.2C32,4.1,28,0,23.6,0z"/>
+        </svg>
+        <svg class="heart2" viewBox="-5 -5 42 39">
+            <defs>
+                <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ff007f; stop-opacity:1;" />
+                    <stop offset="100%" style="stop-color:#ff8ab8; stop-opacity:1;" />
+                </linearGradient>
+            </defs>
+            <path fill="none" stroke="url(#gradient3)" stroke-width="2.5" d="M23.6,0C20.5,0,18.2,1.6,16,4.4C13.8,1.6,11.5,0,8.4,0C4,0,0,4.1,0,9.4
+                c0,5.8,8.2,11.1,16,19.2c7.8-8.1,16-13.4,16-19.2C32,4.1,28,0,23.6,0z"/>
+        </svg>
+    </div>
+    <button class="navigate-button" id="navigateBtn" onclick="navigateToIndex()">Click Click Click đi TBB</button>
+    <script>
+        function navigateToIndex() {
+            window.location.href = 'index2.html'; // Navigate to index1.html
+        }
+
+        // Show button after heart animation ends
+        const hearts = document.querySelectorAll('.heart');
+        const button = document.getElementById('navigateBtn');
+
+        hearts[0].addEventListener('animationend', () => {
+            button.style.display = 'block'; // Show the button
+        });
+    </script>
+</body>
+</html>

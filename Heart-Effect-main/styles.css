@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    flex-direction: column; /* Stack hearts and button vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000; /* Black background */
+}
+
+.hearts-container {
+    display: flex;
+    gap: 20px; /* Space between hearts */
+}
+
+.heart {
+    width: 300px; /* Heart size */
+    height: 300px; /* Maintain aspect ratio */
+    animation: draw 3s forwards, pulse 0.5s infinite alternate; /* Drawing and pulsing animation */
+    stroke: #ff007f; /* Stroke color */
+    filter: drop-shadow(0 0 20px #ff007f); /* Glow effect */
+}
+.heart1 {
+    width: 300px; /* Heart size */
+    height: 300px; /* Maintain aspect ratio */
+    animation: draw 3.5s forwards, pulse 0.7s infinite alternate; /* Drawing and pulsing animation */
+    stroke: #ff007f; /* Stroke color */
+    filter: drop-shadow(0 0 20px #ff007f); /* Glow effect */
+}
+.heart2 {
+    width: 300px; /* Heart size */
+    height: 300px; /* Maintain aspect ratio */
+    animation: draw 4s forwards, pulse 0.9s infinite alternate; /* Drawing and pulsing animation */
+    stroke: #ff007f; /* Stroke color */
+    filter: drop-shadow(0 0 20px #ff007f); /* Glow effect */
+}
+
+.navigate-button {
+    display: none; /* Hide button initially */
+    margin-top: 20px; /* Space between hearts and button */
+    padding: 10px 20px;
+    background-color: #ff007f; /* Button color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+    animation: pulse 2s infinite alternate;
+}
+
+.navigate-button:hover {
+    background-color: #e6006b; /* Darker shade on hover */
+}
+
+@keyframes draw {
+    0% {
+        stroke-dasharray: 100; /* Start from a blank line */
+        stroke-dashoffset: 100; /* Move the dash offset */
+    }
+    100% {
+        stroke-dasharray: 100; /* Full length of the path */
+        stroke-dashoffset: 0; /* No offset */
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Original size */
+        filter: drop-shadow(0 0 20px #ff007f); /* Glow effect */
+    }
+    100% {
+        transform: scale(1.1); /* Grow effect */
+        filter: drop-shadow(0 0 30px #ff007f); /* Enhanced glow effect */
+    }
+}
